@@ -7,6 +7,14 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      "recoleta": ["var(--font-recoleta)"],
+      "sequel": ["var(--font-sequel-sans)"],
+    },
+    container: {
+      center: true,
+      padding: "1rem",
+    },
     extend: {
       colors: {
         background: "var(--background)",

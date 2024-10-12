@@ -1,101 +1,201 @@
-import Image from "next/image";
+import Header from "./components/Header";
+import Slider from "./components/Slider";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <Header />
+      <main>
+        {/* Sezione HERO */}
+        <section
+          className="bg-green-100 bg-cover bg-left pt-16"
+          style={{
+            backgroundImage: "url(/hero-bg.jpg)",
+            backgroundSize: "125%",
+          }}
+        >
+          <div className="bg-gradient flex flex-col text-left px-6 py-24 pb-32 w-full">
+            <section className="container">
+              <h1 className="text-4xl font-bold text-green-700 mb-4 font-recoleta">
+                Coltiviamo Consapevolezza e Sostenibilità
+              </h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+              <div className="max-w-2xl">
+                <p className="text-xl text-green-800">
+                  Sottobosco ti connette direttamente con piccoli produttori
+                  locali, promuovendo un futuro più verde e sano.
+                </p>
+                <p className="text-xl text-green-800 mt-4">
+                  Riscopri il gusto autentico dei prodotti locali e apprendi a
+                  nutrire il pianeta.
+                </p>
+
+                <p className=" text-green-800 mt-8">
+                  Iscriviti per essere il primo a sapere quando la piattaforma
+                  sarà disponibile
+                </p>
+
+                <form action="#" className="mt-2 flex w-full max-w-xl mr-auto">
+                  <input
+                    type="email"
+                    placeholder="Inserisci la tua email"
+                    className="px-4 py-2 rounded-l-lg border-t border-l border-b border-gray-300 focus:outline-none w-full max-w-[300px]"
+                  />
+                  <button
+                    type="submit"
+                    className="bg-green-500 text-white p-4 rounded-r-lg hover:bg-green-600 transition min-w-fit"
+                  >
+                    Voglio essere aggiornato
+                  </button>
+                </form>
+
+                {/* <div className="flex items-center mt-4">
+                  <a href="#marketplace" className="btn-primary">
+                    Scopri i Prodotti Locali
+                  </a>
+                  <a href="#produttori" className="ml-4 btn-outline">
+                    Unisciti alla Comunità di Produttori
+                  </a>
+                </div> */}
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section className="bg-green-50 py-16" id="chi-siamo">
+          <div className="container px-6 max-w-4xl">
+            <p className="text-green-800 text-center uppercase">
+              Più di un semplice marketplace
+            </p>
+            <h2 className="text-green-700 text-center mt-4 font-recoleta text-4xl font-semibold">
+              Siamo una cooperativa che supporta i piccoli produttori locali e
+              promuove un'agricoltura sostenibile.
+            </h2>
+            <p className="text-lg text-green-800 text-center mt-4">
+              Crediamo che ogni acquisto possa fare la differenza, scegliendo
+              prodotti freschi, locali e biologici, coltivati con rispetto per
+              l'ambiente e la comunità.
+            </p>
+            {/* <div className="mt-10"> */}
+            {/* <img src="path_to_your_image" alt="Ciclo della terra" className="mx-auto"> */}
+            {/* </div> */}
+          </div>
+        </section>
+
+        <section id="marketplace" className="py-16">
+          <div className="container px-6 text-center max-w-4xl">
+            <h2 className="text-3xl font-bold text-green-700">
+              Il Marketplace dei Prodotti Locali
+            </h2>
+            <p className="text-lg text-green-800">
+              Scopri una selezione di prodotti freschi e biologici coltivati
+              dagli agricoltori locali.
+            </p>
+            <p className="mt-4 text-green-800">
+              Ogni prodotto su Sottobosco racconta una storia: quella del nostro
+              territorio, delle persone che lo lavorano e della passione per la
+              qualità autentica.
+            </p>
+          </div>
+
+          {/* Slider */}
+          <section className="mt-20">
+            <Slider></Slider>
+          </section>
+
+          {/* <div className="flex">
+            <a
+              href="#marketplace"
+              className="mx-auto mt-8 inline-block bg-green-500 text-white p-4 hover:bg-green-600 transition text-center"
+            >
+              Esplora il Marketplace
+            </a>
+          </div> */}
+        </section>
+
+        <section id="produttori" className="bg-white py-16">
+          <div className="container px-6 text-center max-w-4xl">
+            <h2 className="text-3xl font-bold text-green-700">
+              Sei un produttore locale?
+            </h2>
+            <p className="text-lg text-green-800">
+              Unisciti alla nostra comunità e vendi i tuoi prodotti direttamente
+              ai consumatori.
+            </p>
+            <p className="mt-8 text-green-800">
+              Sottobosco ti offre una piattaforma per valorizzare le tue colture
+              e promuovere la tua azienda, con una gestione semplice e
+              trasparente delle vendite
+            </p>
+            <p className="text-green-800">
+              Ogni vendita supporta l'agricoltura sostenibile e il futuro del
+              nostro territorio.
+            </p>
+            <a
+              href="#join"
+              className="mt-6 inline-block bg-green-500 text-white p-4 hover:bg-green-600 transition"
+            >
+              Iscriviti come Produttore
+            </a>
+            {/* <div className="mt-10"> */}
+            {/* <img src="path_to_your_image" alt="Agricoltori felici" className="mx-auto"> */}
+            {/* </div> */}
+          </div>
+        </section>
+
+        <section className="bg-green-50 py-16" id="corsi-e-laboratori">
+          <div className="container px-6 text-center max-w-4xl">
+            <h2 className="text-3xl font-bold text-green-700">
+              Corsi di Sostenibilità e Laboratori Educativi
+            </h2>
+            <p className="text-lg text-green-800">
+              Corsi e laboratori pratici per diffondere la cultura della
+              sostenibilità, dalle scuole alle aziende agricole.
+            </p>
+            <p className="mt-4 text-green-800">
+              Scopri come creare un orto didattico, apprendi nuove tecniche
+              agricole sostenibili o partecipa ai nostri laboratori sulla
+              nutrizione consapevole.
+            </p>
+            <a
+              href="#corsi"
+              className="mt-6 inline-block bg-green-500 text-white p-4 hover:bg-green-600 transition"
+            >
+              Scopri i nostri Corsi
+            </a>
+            {/* <div className="mt-10"> */}
+            {/* <img src="path_to_your_image" alt="Laboratori educativi" className="mx-auto"> */}
+            {/* </div> */}
+          </div>
+        </section>
+
+        <section className=" py-16" id="comunita">
+          <div className="container px-6 text-center max-w-4xl">
+            <h2 className="text-3xl font-bold text-green-700">
+              Unisciti alla Nostra Comunità
+            </h2>
+            <p className="text-lg text-green-800">
+              Iscriviti alla nostra newsletter e unisciti alla comunità di
+              Sottobosco per ricevere offerte esclusive e informazioni sulla
+              sostenibilità.
+            </p>
+            <form action="#" className="mt-6 flex justify-center">
+              <input
+                type="email"
+                placeholder="Inserisci la tua email"
+                className="px-4 py-2 rounded-l-lg border-t border-l border-b border-gray-300 focus:outline-none w-full max-w-[300px]"
+              />
+              <button
+                type="submit"
+                className="bg-green-500 text-white p-4 rounded-r-lg hover:bg-green-600 transition"
+              >
+                Iscriviti
+              </button>
+            </form>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      <footer></footer>
+    </>
   );
 }

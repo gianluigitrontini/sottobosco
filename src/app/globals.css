@@ -5,23 +5,57 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+h1,
+h2,
+h3 {
+  @apply font-recoleta text-green-700;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+body {
+  @apply font-sequel;
+  color: var(--foreground);
+  background: var(--background);
+}
+
+#chi-siamo,
+#marketplace,
+#produttori,
+#corsi-e-laboratori,
+#comunita {
+  scroll-margin-top: 150px;
+}
+
+.btn-primary {
+  @apply bg-green-500 border border-green-500 text-white p-4 hover:bg-green-600 hover:border-transparent transition;
+}
+.btn-outline {
+  @apply bg-transparent border border-green-700 text-green-700 p-4 hover:bg-green-600 hover:text-white hover:border-transparent transition;
+}
+
+.bg-gradient {
+  background: linear-gradient(to bottom, transparent, #fff 85%);
+}
+
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+  gap: 2rem;
+}
+.embla__slide {
+  flex: 0 0 auto;
+
+  min-width: 0;
 }
