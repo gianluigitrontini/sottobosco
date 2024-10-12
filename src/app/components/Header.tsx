@@ -56,7 +56,7 @@ const Header = () => {
         <div className="md:hidden">
           <button onClick={toggleMenu} className="focus:outline-none">
             <svg
-              className="w-6 h-6"
+              className="w-8 h-8 text-green-800"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -75,34 +75,34 @@ const Header = () => {
 
       {menuOpen && (
         <nav className="md:hidden w-full fixed inset-0 bg-white">
-          <ul className="flex flex-col gap-8 p-4 text-xl text-center">
+          <ul className="flex flex-col gap-8 p-4 text-xl text-center text-green-800">
             <li>
-              <a href="#chi-siamo" onClick={() => toggleMenu()}>
+              <a href="#chi-siamo" onClick={toggleMenu}>
                 Chi Siamo
               </a>
             </li>
             <li>
-              <a href="#marketplace" onClick={() => toggleMenu()}>
+              <a href="#marketplace" onClick={toggleMenu}>
                 Marketplace
               </a>
             </li>
             <li>
-              <a href="#produttori" onClick={() => toggleMenu()}>
+              <a href="#produttori" onClick={toggleMenu}>
                 Per i Produttori
               </a>
             </li>
             <li>
-              <a href="#corsi-e-laboratori" onClick={() => toggleMenu()}>
+              <a href="#corsi-e-laboratori" onClick={toggleMenu}>
                 Corsi e Laboratori
               </a>
             </li>
             <li>
-              <a href="#comunita" onClick={() => toggleMenu()}>
+              <a href="#comunita" onClick={toggleMenu}>
                 Rimani Aggiornato
               </a>
             </li>
             <li>
-              <button onClick={() => toggleMenu()} className="btn-outline">
+              <button onClick={toggleMenu} className="btn-outline">
                 Chiudi
               </button>
             </li>
