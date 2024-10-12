@@ -82,7 +82,10 @@ const Slider = () => {
           <p className="text-green-700 text-sm mt-4">Disponibile da Oggi</p>
         </div>
         {products.map((product) => (
-          <div className="embla__slide w-[250px] h-full bg-white p-6 border rounded-lg select-none">
+          <div
+            className="embla__slide w-[250px] h-full bg-white p-6 border rounded-lg select-none"
+            key={product.id}
+          >
             <img
               src={`/images/products/product-${product.id}.jpg`}
               alt={product.name}

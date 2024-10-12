@@ -69,12 +69,12 @@ export default function Home() {
             </p>
             <h2 className="text-green-700 text-center mt-4 font-recoleta text-4xl font-semibold">
               Siamo una cooperativa che supporta i piccoli produttori locali e
-              promuove un'agricoltura sostenibile.
+              promuove un&apos;agricoltura sostenibile.
             </h2>
             <p className="text-lg text-green-800 text-center mt-4">
               Crediamo che ogni acquisto possa fare la differenza, scegliendo
               prodotti freschi, locali e biologici, coltivati con rispetto per
-              l'ambiente e la comunità.
+              l&apos;ambiente e la comunità.
             </p>
             {/* <div className="mt-10"> */}
             {/* <img src="path_to_your_image" alt="Ciclo della terra" className="mx-auto"> */}
@@ -128,8 +128,8 @@ export default function Home() {
               trasparente delle vendite
             </p>
             <p className="text-green-800">
-              Ogni vendita supporta l'agricoltura sostenibile e il futuro del
-              nostro territorio.
+              Ogni vendita supporta l&apos;agricoltura sostenibile e il futuro
+              del nostro territorio.
             </p>
             <a
               href="#join"
