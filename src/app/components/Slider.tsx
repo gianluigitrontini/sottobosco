@@ -69,7 +69,7 @@ const Slider = () => {
 
   return (
     <div className="embla" ref={emblaRef}>
-      <div className="embla__container container ">
+      <div className="embla__container ml-6 pl-6">
         <div className="embla__slide w-[250px] h-full bg-white p-6 border rounded-lg select-none">
           <img
             src={`/images/box-image.png`}
