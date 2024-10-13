@@ -14,7 +14,7 @@ export default function Home() {
             backgroundImage: "url(/hero-bg.jpg)",
           }}
         >
-          <div className="bg-gradient flex flex-col text-left w-full py-40">
+          <div className="bg-gradient-to-b from-transparent via-30% to-green-50 flex flex-col text-left w-full py-40">
             <section className="container">
               <h1 className="text-4xl font-bold text-green-700 mb-4 font-recoleta">
                 Coltiviamo Consapevolezza e Sostenibilità
@@ -63,15 +63,17 @@ export default function Home() {
         </section>
 
         <section
-          className="relative bg-green-50 py-32 overflow-hidden"
+          className="relative bg-gradient-to-b from-green-50 to-white py-32 overflow-hidden"
           id="chi-siamo"
         >
           <img
             src="images/agricultural-overlay.png"
-            className="absolute bottom-0 right-0 md:-bottom-24 opacity-15 min-w-[175%] lg:min-w-full"
+            className="absolute bottom-0 right-0 md:-bottom-24 opacity-25 min-w-[175%] lg:min-w-full z-0"
             alt=""
           />
-          <div className="container max-w-4xl">
+          <div className="absolute bottom-0 bg-gradient-to-b from-transparent to-white z-[1] w-full h-[150px]" />
+
+          <div className="container max-w-4xl relative z-[2]">
             <p className="text-green-800 text-center uppercase">
               Più di un semplice marketplace
             </p>
