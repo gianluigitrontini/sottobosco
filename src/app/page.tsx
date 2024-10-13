@@ -176,7 +176,7 @@ export default function Home() {
         </section>
 
         <section
-          className="relative py-20 bg-opacity-25 flex flex-col md:flex-row justify-center items-center bg-green-100 overflow-hidden"
+          className="relative py-20 bg-opacity-25 bg-green-100 overflow-hidden"
           id="comunita"
         >
           <img
@@ -184,43 +184,46 @@ export default function Home() {
             className="absolute right-0 top-0 -z-10 opacity-50"
             alt=""
           />
-          <div className="flex flex-col gap-2 px-6 text-left w-2/3 max-w-xl z-[1]">
-            <h2 className="text-3xl font-bold text-green-700">
-              Unisciti alla Nostra Comunità
-            </h2>
-            <p className="text-lg text-green-800">
-              Unisciti alla comunità di Sottobosco per ricevere offerte
-              esclusive e informazioni sulla sostenibilità.
-            </p>
-            <p className="text-lg text-green-800">
-              Verrai informato quando lanceremo la piattaforma e riceverai
-              sconti riservati ai primi iscritti.
-            </p>
-          </div>
 
-          <form
-            action="#"
-            className="mt-6 flex flex-col gap-4 p-8 rounded-lg w-1/3 bg-white bg-opacity-75"
-          >
-            <input
-              type="text"
-              placeholder="Inserisci il nome"
-              className="px-4 py-2 border focus:outline-none w-full"
-            />
+          <div className="p-6 flex flex-col md:flex-row justify-center items-center">
+            <div className="flex flex-col gap-2  text-left w-full lg:w-2/3 max-w-xl z-[1]">
+              <h2 className="text-3xl font-bold text-green-700">
+                Unisciti alla Nostra Comunità
+              </h2>
+              <p className="text-lg text-green-800">
+                Unisciti alla comunità di Sottobosco per ricevere offerte
+                esclusive e informazioni sulla sostenibilità.
+              </p>
+              <p className="text-lg text-green-800">
+                Verrai informato quando lanceremo la piattaforma e riceverai
+                sconti riservati ai primi iscritti.
+              </p>
+            </div>
 
-            <input
-              required
-              type="email"
-              placeholder="Inserisci la tua email (richiesto)"
-              className="px-4 py-2 border focus:outline-none w-full"
-            />
-            <button
-              type="submit"
-              className="bg-green-500 text-white p-4 rounded-lg hover:bg-green-600 transition"
+            <form
+              action="#"
+              className="mt-6 flex flex-col gap-4 p-8 rounded-lg w-full lg:w-1/3 bg-white bg-opacity-75"
             >
-              Iscriviti
-            </button>
-          </form>
+              <input
+                type="text"
+                placeholder="Inserisci il nome"
+                className="px-4 py-2 border focus:outline-none w-full"
+              />
+
+              <input
+                required
+                type="email"
+                placeholder="Inserisci la tua email (richiesto)"
+                className="px-4 py-2 border focus:outline-none w-full"
+              />
+              <button
+                type="submit"
+                className="bg-green-500 text-white p-4 rounded-lg hover:bg-green-600 transition"
+              >
+                Iscriviti
+              </button>
+            </form>
+          </div>
         </section>
       </main>
       <footer></footer>
