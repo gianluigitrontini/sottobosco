@@ -53,7 +53,7 @@ const Slider = () => {
     },
     {
       id: 7,
-      name: "Cavolo",
+      name: "Broccoli",
       produttore: "Azienda Agricola Verdi",
       image: "product-7.jpg",
       ritiro_date: "Oggi",

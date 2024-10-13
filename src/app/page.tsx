@@ -5,6 +5,7 @@ export default function Home() {
   return (
     <>
       <Header />
+
       <main>
         {/* Sezione HERO */}
         <section
@@ -61,8 +62,16 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-green-50 py-32" id="chi-siamo">
-          <div className="container px-6 max-w-4xl">
+        <section
+          className="relative bg-green-50 py-32 overflow-hidden"
+          id="chi-siamo"
+        >
+          <img
+            src="images/agricultural-overlay.png"
+            className="absolute bottom-0 right-0 md:-bottom-24 opacity-15 min-w-[175%] lg:min-w-full"
+            alt=""
+          />
+          <div className="container max-w-4xl">
             <p className="text-green-800 text-center uppercase">
               Più di un semplice marketplace
             </p>
@@ -82,7 +91,7 @@ export default function Home() {
         </section>
 
         <section id="marketplace" className="py-32">
-          <div className="container px-6 text-center max-w-4xl">
+          <div className="container text-center max-w-4xl">
             <h2 className="text-3xl font-bold text-green-700">
               Il Marketplace dei Prodotti Locali
             </h2>
@@ -99,7 +108,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Slider */}
           <section className="mt-20">
             <Slider></Slider>
           </section>
@@ -119,12 +127,13 @@ export default function Home() {
           className="bg-cover lg:bg-[length:125%] bg-no-repeat bg-center lg:bg-left-top !bg-none md:!bg-[url(/images/produttore-bg.jpg)]"
         >
           <div className="md:hidden bg-[url(/images/produttore-bg.jpg)] bg-cover bg-right w-full h-64"></div>
-          <div className="bg-gradient-to-r from-white from-35% to-transparent px-6 text-left pt-4 pb-32 md:pt-32">
+          <div className="bg-gradient-to-r from-white from-35% to-transparent pt-4 pb-32 md:pt-32">
             <div className="container">
-              <div className="max-w-xl">
+              <div className="text-left max-w-xl">
                 <h2 className="text-3xl font-bold text-green-700 mb-2">
                   Sei un produttore locale?
                 </h2>
+
                 <p className="text-lg text-green-800">
                   Unisciti alla nostra comunità e vendi i tuoi prodotti
                   direttamente ai consumatori.
@@ -149,52 +158,59 @@ export default function Home() {
           </div>
         </section>
 
-        <section className=" py-32" id="corsi-e-laboratori">
-          <div className="container px-6 text-center max-w-4xl">
-            <h2 className="text-3xl font-bold text-green-700">
-              Corsi di Sostenibilità e Laboratori Educativi
-            </h2>
-            <p className="text-lg text-green-800">
-              Corsi e laboratori pratici per diffondere la cultura della
-              sostenibilità, dalle scuole alle aziende agricole.
-            </p>
-            <p className="mt-4 text-green-800">
-              Scopri come creare un orto didattico, apprendi nuove tecniche
-              agricole sostenibili o partecipa ai nostri laboratori sulla
-              nutrizione consapevole.
-            </p>
-            <a
-              href="#corsi"
-              className="mt-6 inline-block bg-green-500 text-white p-4 hover:bg-green-600 transition"
-            >
-              Scopri i nostri Corsi
-            </a>
-            {/* <div className="mt-10"> */}
-            {/* <img src="path_to_your_image" alt="Laboratori educativi" className="mx-auto"> */}
-            {/* </div> */}
+        <section
+          id="corsi-e-laboratori"
+          className="bg-cover lg:bg-[length:125%] bg-no-repeat bg-center lg:bg-right !bg-none md:!bg-[url(/images/corsi-bg.jpg)]"
+        >
+          <div className="md:hidden bg-[url(/images/corsi-bg.jpg)] bg-cover bg-right w-full h-64"></div>
+
+          <div className="bg-gradient-to-l from-white from-40% to-transparent pt-4 pb-32 md:pt-32">
+            <div className="container">
+              <div className="text-left max-w-xl ml-auto">
+                <h2 className="text-3xl font-bold text-green-700">
+                  Corsi di Sostenibilità e Laboratori Educativi
+                </h2>
+                <p className="text-lg text-green-800">
+                  Corsi e laboratori pratici per diffondere la cultura della
+                  sostenibilità, dalle scuole alle aziende agricole.
+                </p>
+                <p className="mt-4 text-green-800">
+                  Scopri come creare un orto didattico, apprendi nuove tecniche
+                  agricole sostenibili o partecipa ai nostri laboratori sulla
+                  nutrizione consapevole.
+                </p>
+                <a
+                  href="#corsi"
+                  className="mt-6 inline-block bg-green-500 text-white p-4 hover:bg-green-600 transition"
+                >
+                  Scopri i nostri Corsi
+                </a>
+              </div>
+            </div>
           </div>
         </section>
 
         <section
-          className="relative py-20 bg-opacity-25 bg-green-100 overflow-hidden"
+          className="relative py-32 bg-green-50 overflow-hidden"
           id="comunita"
         >
           <img
             src="images/iscriviti-overlay.png"
-            className="absolute right-0 top-0 -z-10 opacity-50"
+            className="absolute right-0 top-0 opacity-25"
             alt=""
           />
 
-          <div className="p-6 flex flex-col md:flex-row justify-center items-center">
-            <div className="flex flex-col gap-2  text-left w-full lg:w-2/3 max-w-xl z-[1]">
+          <div className="container flex flex-col md:flex-row justify-center items-center relative z-[1]">
+            <div className="flex flex-col gap-4 text-left w-full z-[1]">
               <h2 className="text-3xl font-bold text-green-700">
                 Unisciti alla Nostra Comunità
               </h2>
-              <p className="text-lg text-green-800">
+
+              <p className="text-lg text-green-800 max-w-xl">
                 Unisciti alla comunità di Sottobosco per ricevere offerte
                 esclusive e informazioni sulla sostenibilità.
               </p>
-              <p className="text-lg text-green-800">
+              <p className="text-lg text-green-800 max-w-xl">
                 Verrai informato quando lanceremo la piattaforma e riceverai
                 sconti riservati ai primi iscritti.
               </p>
@@ -202,7 +218,7 @@ export default function Home() {
 
             <form
               action="#"
-              className="mt-6 flex flex-col gap-4 p-8 rounded-lg w-full lg:w-1/3 bg-white bg-opacity-75"
+              className="mt-6 flex flex-col gap-4 p-8 rounded-lg w-full lg:max-w-[400px] bg-white bg-opacity-75"
             >
               <input
                 type="text"
