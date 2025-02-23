@@ -1,3 +1,5 @@
+import SubscribeForm from "@/components/SubscribeForm";
+import { Toaster } from "sonner";
 import Header from "./components/Header";
 import Slider from "./components/Slider";
 
@@ -16,47 +18,28 @@ export default function Home() {
         >
           <div className="bg-gradient-to-b from-transparent via-30% to-green-50 flex flex-col text-left w-full py-40">
             <section className="container">
-              <h1 className="text-4xl font-bold text-green-700 mb-4 font-recoleta">
-                Coltiviamo Consapevolezza e Sostenibilità
-              </h1>
+              <div className="flex flex-col md:flex-row items-center justify-between gap-20">
+                <div className="max-w-2xl">
+                  <h1 className="text-4xl font-bold text-green-700 mb-4 font-recoleta">
+                    Coltiviamo Consapevolezza e Sostenibilità
+                  </h1>
 
-              <div className="max-w-2xl">
-                <p className="text-xl text-green-800">
-                  Sottobosco ti connette direttamente con piccoli produttori
-                  locali, promuovendo un futuro più verde e sano.
-                </p>
-                <p className="text-xl text-green-800 mt-4">
-                  Riscopri il gusto autentico dei prodotti locali e apprendi a
-                  nutrire il pianeta.
-                </p>
+                  <p className="text-xl text-green-800">
+                    Sottobosco ti connette direttamente con piccoli produttori
+                    locali, promuovendo un futuro più verde e sano.
+                  </p>
+                  <p className="text-xl text-green-800 mt-4">
+                    Riscopri il gusto autentico dei prodotti locali e apprendi a
+                    nutrire il pianeta.
+                  </p>
 
-                <p className=" text-green-800 mt-8">
-                  Iscriviti per essere il primo a sapere quando la piattaforma
-                  sarà disponibile
-                </p>
+                  <p className=" text-green-800 mt-8">
+                    Iscriviti per essere il primo a sapere quando la piattaforma
+                    sarà disponibile
+                  </p>
+                </div>
 
-                <form action="#" className="mt-2 flex w-full max-w-xl mr-auto">
-                  <input
-                    type="email"
-                    placeholder="Inserisci la tua email"
-                    className="px-4 py-2 rounded-l-lg border-t border-l border-b border-gray-300 focus:outline-none w-full max-w-[300px]"
-                  />
-                  <button
-                    type="submit"
-                    className="bg-green-500 text-white p-4 rounded-r-lg hover:bg-green-600 transition min-w-fit"
-                  >
-                    Iscriviti
-                  </button>
-                </form>
-
-                {/* <div className="flex items-center mt-4">
-                  <a href="#marketplace" className="btn-primary">
-                    Scopri i Prodotti Locali
-                  </a>
-                  <a href="#produttori" className="ml-4 btn-outline">
-                    Unisciti alla Comunità di Produttori
-                  </a>
-                </div> */}
+                <SubscribeForm />
               </div>
             </section>
           </div>
@@ -86,9 +69,6 @@ export default function Home() {
               prodotti freschi, locali e biologici, coltivati con rispetto per
               l&apos;ambiente e la comunità.
             </p>
-            {/* <div className="mt-10"> */}
-            {/* <img src="path_to_your_image" alt="Ciclo della terra" className="mx-auto"> */}
-            {/* </div> */}
           </div>
         </section>
 
@@ -192,15 +172,12 @@ export default function Home() {
           </div>
         </section>
 
-        <section
-          className="relative py-32 bg-green-50 overflow-hidden"
-          id="comunita"
-        >
-          <img
+        <section className="relative py-32  overflow-hidden" id="comunita">
+          {/* <img
             src="images/iscriviti-overlay.png"
             className="absolute right-0 top-0 opacity-25"
             alt=""
-          />
+          /> */}
 
           <div className="container flex flex-col md:flex-row justify-center items-center relative z-[1]">
             <div className="flex flex-col gap-4 text-left w-full z-[1]">
@@ -218,33 +195,11 @@ export default function Home() {
               </p>
             </div>
 
-            <form
-              action="#"
-              className="mt-6 flex flex-col gap-4 p-8 rounded-lg w-full lg:max-w-[400px] bg-white bg-opacity-75"
-            >
-              <input
-                type="text"
-                placeholder="Inserisci il nome"
-                className="px-4 py-2 border focus:outline-none w-full"
-              />
-
-              <input
-                required
-                type="email"
-                placeholder="Inserisci la tua email (richiesto)"
-                className="px-4 py-2 border focus:outline-none w-full"
-              />
-              <button
-                type="submit"
-                className="bg-green-500 text-white p-4 rounded-lg hover:bg-green-600 transition"
-              >
-                Iscriviti
-              </button>
-            </form>
+            <SubscribeForm />
           </div>
         </section>
       </main>
-      <footer></footer>
+      <Toaster />
     </>
   );
 }
