@@ -129,12 +129,13 @@ export default function Home() {
                   Ogni vendita supporta l&apos;agricoltura sostenibile e il
                   futuro del nostro territorio.
                 </p>
-                <a
+                {/* TODO: Non pronta */}
+                {/* <a
                   href="#join"
                   className="mt-6 inline-block bg-green-500 text-white p-4 hover:bg-green-600 transition"
                 >
                   Iscriviti come Produttore
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
@@ -161,12 +162,13 @@ export default function Home() {
                   agricole sostenibili o partecipa ai nostri laboratori sulla
                   nutrizione consapevole.
                 </p>
-                <a
+                {/* TODO: Non pronta */}
+                {/* <a
                   href="#corsi"
                   className="mt-6 inline-block bg-green-500 text-white p-4 hover:bg-green-600 transition"
                 >
                   Scopri i nostri Corsi
-                </a>
+                </a> */}
               </div>
             </div>
           </div>

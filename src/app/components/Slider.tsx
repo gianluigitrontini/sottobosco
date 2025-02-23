@@ -40,14 +40,14 @@ const Slider = () => {
     {
       id: 5,
       name: "Pane Integrale",
-      produttore: "Panificio Rosso",
+      produttore: "Panificio Rossi",
       image: "product-5.jpg",
       ritiro_date: "Oggi",
     },
     {
       id: 6,
       name: "Caffè",
-      produttore: "Brazilian Coffee Piceno",
+      produttore: "Azienda Picena",
       image: "product-6.jpg",
       ritiro_date: "dal 15 Novembre",
     },
@@ -75,12 +75,11 @@ const Slider = () => {
             src={`/images/box-image.png`}
             className="h-44 w-full object-contain"
           />
-          <h3 className="text-xl font-bold text-green-900 mt-4">
-            Box mix di produttori
-          </h3>
-          {/* di {product.produttore} */}
+          <h3 className="text-xl font-bold text-green-900 mt-4">Box mista</h3>
+          di produttori locali
           <p className="text-green-700 text-sm mt-4">Disponibile da Oggi</p>
         </div>
+
         {products.map((product) => (
           <div
             className="embla__slide w-[250px] h-full bg-white p-6 border rounded-lg select-none"
